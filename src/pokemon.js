@@ -1,6 +1,8 @@
-import React, {PureComponent} from 'react'
+import React, {Component} from 'react'
 
-class Pokemon extends PureComponent {
+// This is the component to display an individual Pokemon
+// TODO Refactor not to rely so much on hard coded pathnames
+class Pokemon extends Component {
     render() {
         const {pokemon} = this.props;
 
@@ -8,14 +10,14 @@ class Pokemon extends PureComponent {
             <div className="pokemon">
                 <button
                     type="button"
-                    className="pokemon__sprite"
+                    className="pokemon_sprite"
                     style={{
                         backgroundImage: `url(${`http://localhost:3001/images/${
                             pokemon.id
                             }.png`})`
                     }}
                 />
-                <p className="pokemon__name">{pokemon.name}</p>
+                <p className="pokemon_name">{pokemon.name}</p>
             </div>
         )
     }

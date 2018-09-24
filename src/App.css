@@ -3,8 +3,7 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 100px;
 }
 
 .App-header {
@@ -21,11 +20,6 @@
 .App-intro {
   font-size: large;
 }
-
-/*@keyframes App-logo-spin {*/
-  /*from { transform: rotate(0deg); }*/
-  /*to { transform: rotate(360deg); }*/
-/*}*/
 
 
 .page__search {
@@ -45,20 +39,20 @@
   list-style: none;
 }
 
-.pokemons__item {
+.pokemons_item {
   display: inline-flex;
   margin: 10px;
 }
 
 .pokemon {
   position: relative;
-  z-index: 20000;
+  z-index: 20000; /* Set a huge z-index to ensure stays on top */
   overflow: hidden;
   background-color: #eee;
   cursor: pointer;
 }
 
-.pokemon__sprite {
+.pokemon_sprite {
   position: absolute;
   top: 0;
   right: 0;
@@ -72,12 +66,12 @@
 }
 
 .pokemon,
-.pokemon__sprite {
+.pokemon_sprite {
   width: 140px;
   height: 140px;
 }
 
-.pokemon__name {
+.pokemon_name {
   position: absolute;
   right: 0;
   bottom: 0;
